@@ -13,6 +13,8 @@ public class PersonController {
 
     private final PersonService personService;
 
+
+
     @Autowired
     public PersonController(PersonService personService) {
         this.personService = personService;
@@ -23,8 +25,16 @@ public class PersonController {
         this.personService.addPerson(person);
     }
 
+    /*
     @GetMapping
     public List<Person> getAllPeople() {
         return this.personService.getAllPeople();
+    }
+    */
+
+
+    @GetMapping
+    public String test() {
+        return "aloha";
     }
 }
